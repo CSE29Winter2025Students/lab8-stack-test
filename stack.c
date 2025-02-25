@@ -12,3 +12,11 @@ void reset() {
 
 // Implement your team's function here!
 
+int pop() {
+    struct Node *deleting = stackTop;
+    int i = deleting->data;
+    stackTop = deleting->next;
+    free(deleting);
+    return i;
+}
+
